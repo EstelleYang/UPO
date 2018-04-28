@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:theme="@android:style/Theme.NoTitleBar">
+    <include layout="@layout/toolbar_main"  android:id="@+id/id_toolbar"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/rb_mainPage"
+            style="@style/bottom_bar_txt_style"
+            android:drawableTop="@drawable/click_main"
+            android:text="首页"
+            android:button="@null"
+             />
+
+        <RadioButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/rb_helpPage"
+            style="@style/bottom_bar_txt_style"
+            android:drawableTop="@drawable/click_help"
+            android:text="辅助诊断"
+            android:button="@null"/>
+
+        <RadioButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/rb_reportPage"
+            style="@style/bottom_bar_txt_style"
+            android:drawableTop="@drawable/click_report"
+            android:text="诊断报告"
+            android:button="@null"/>
+
+        <RadioButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/rb_minePage"
+            style="@style/bottom_bar_txt_style"
+            android:drawableTop="@drawable/click_mine"
+            android:text="个人中心"
+            android:button="@null"  />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="#e1e0e0" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        />
+
+
+</RelativeLayout>
